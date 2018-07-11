@@ -19,5 +19,10 @@
     <bean name="c" class="com.soto.pojo.Category">
         <property name="name" value="category 1" />
     </bean>
+    <bean name="p" class="com.soto.pojo.Product">
+        <property name="name" value="product1"/>
+        <property name="category" ref="c"/>
+
+    </bean>
 
 </beans>
