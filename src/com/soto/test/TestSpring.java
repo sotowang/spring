@@ -2,6 +2,7 @@ package com.soto.test;
 
 import com.soto.pojo.Category;
 import com.soto.pojo.Product;
+import com.soto.service.ProductService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -11,9 +12,8 @@ public class TestSpring {
 
         Product p = (Product) context.getBean("p");
 
-        System.out.println(p.getName());
-
-        System.out.println(p.getCategory().getName());
+        ProductService s = (ProductService) context.getBean("s");
+        s.doSomeService();
 
     };
 }

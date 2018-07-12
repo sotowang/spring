@@ -27,4 +27,7 @@
 
     <!--</bean>-->
     <context:component-scan base-package="com.soto.pojo"/>
+    <context:component-scan base-package="com.soto.aspect"/>
+    <context:component-scan base-package="com.soto.service"/>
+    <aop:aspectj-autoproxy/>
 </beans>
