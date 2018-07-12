@@ -15,14 +15,16 @@
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 
-    <!--通过关键字c即可获取Category对象，该对象获取的时候，即被注入了字符串"category 1“到name属性中-->
-    <bean name="c" class="com.soto.pojo.Category">
-        <property name="name" value="category 1" />
-    </bean>
-    <bean name="p" class="com.soto.pojo.Product">
-        <property name="name" value="product1"/>
-        <property name="category" ref="c"/>
+    <!--&lt;!&ndash;表示告诉Spring要用注解的方式进行配置&ndash;&gt;-->
+    <!--<context:annotation-config/>-->
+    <!--&lt;!&ndash;通过关键字c即可获取Category对象，该对象获取的时候，即被注入了字符串"category 1“到name属性中&ndash;&gt;-->
+    <!--<bean name="c" class="com.soto.pojo.Category">-->
+        <!--<property name="name" value="category 1" />-->
+    <!--</bean>-->
+    <!--<bean name="p" class="com.soto.pojo.Product">-->
+        <!--<property name="name" value="product1"/>-->
+        <!--&lt;!&ndash;<property name="category" ref="c"/>&ndash;&gt;-->
 
-    </bean>
-
+    <!--</bean>-->
+    <context:component-scan base-package="com.soto.pojo"/>
 </beans>
